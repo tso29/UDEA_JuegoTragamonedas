@@ -21,7 +21,7 @@
 
     <div id="mesa">
       <ul>
-        <li ng-repeat="img in carretes" class="carrete">
+        <li ng-repeat="img in carretes track by $index" class="carrete">
           <img ng-src="{{img}}" />
         </li>
       </ul>

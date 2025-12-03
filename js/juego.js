@@ -58,9 +58,9 @@ angular.module("Tragamonedas", [])
         };
 
         function evaluar() {
-            let a = carrete1.getImagen();
-            let b = carrete2.getImagen();
-            let c = carrete3.getImagen();
+            let a = carrete1.getNombre();
+            let b = carrete2.getNombre();
+            let c = carrete3.getNombre();
 
             if (a === b && b === c) {
                 $scope.resultado = "GANASTE";

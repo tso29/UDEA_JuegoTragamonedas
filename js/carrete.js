@@ -12,8 +12,10 @@ function Carrete(simbolos) {
         this.indice = Math.floor(Math.random() * this.simbolos.length);
     };
 
-    this.getNombre = function() {
-        let partes = this.simbolos[this.indice].split("/");
-        return partes[partes.length - 1];
-    }
+    this.getNombre = function () {
+        var partes = this.simbolos[this.indice].split("/");
+        var nombreConExt = partes[partes.length - 1] || "";
+        var nombre = nombreConExt.replace(/\.[^.]+$/, "").toLowerCase().trim();
+    return nombre;
+};
 }
