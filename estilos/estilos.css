@@ -1,5 +1,7 @@
 body{
-    background-color: #2424E3;
+    background: linear-gradient(135deg, #001f4d, #0073e6);
+    height: 100vh;
+    margin: 0;
 }
 
 .encabezado{
@@ -19,23 +21,18 @@ body{
     -webkit-text-stroke: 1.5px black;
     font: 32pt Segoe UI;
     font-weight: bold;
-    line-height: 150px;
+    line-height: 130px;
 }
 
 .boton{
-    margin-top: 5px;
+    margin-top: 2px;
     text-align: center;
 }
 
 .boton-play{
     font-size: 28px;
-    background-color: #434343;
-    background-image: -webkit-linear-gradient(100% 100% 90deg, #515151, #7A7A7A);
-    background-image: -moz-linear-gradient(100% 100% 90deg, #515151, #7A7A7A);
-    background-image: -o-linear-gradient(100% 100% 90deg, #515151, #7A7A7A);
-    background-image: -ms-linear-gradient(100% 100% 90deg, #515151, #7A7A7A);
-    background-image: linear-gradient(100% 100% 90deg, #515151, #7A7A7A);
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7A7A7A), to(#515151));
+    background-color: #F4320B;
+    background-image: none;
 
     border: none;
     border-top: 3px solid #c2c2c2;
@@ -55,7 +52,7 @@ body{
     text-shadow: 0 1px 0 rgba(255,255,255,0.2);
     margin-right: 10px;
     text-decoration: none;
-    color: #242424;
+    color: white;
 	
     display: inline-flex;
     align-items: center;
@@ -83,13 +80,13 @@ body{
 }
 
 .boton-play:hover {
-    color: #00aeff; /* Color del texto */
-    text-shadow: -1px -1px 1px #000; /* Sombra del texto */
+    color: black; /* Color del texto */
+    text-shadow: none; /* Sombra del texto */
 }
 
 #mesa {
 	position: absolute;  
-	top: 350px;  
+	top: 320px;  
 
     left: 50%; 
     transform: translateX(-50%);
@@ -134,6 +131,12 @@ body{
     list-style: none;
 }
 
+#mesa ul li img {
+    border: 4px solid yellow;
+    border-radius: 12px;
+    box-shadow: 0 0 10px yellow, 0 0 20px gold; /* brillo */
+}
+
 .carrete {
     list-style: none;
     display: inline-block;
@@ -148,13 +151,40 @@ body{
 }
 
 .resultado {
-    margin-top: 15px;
-    font-size: 26px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 24px;
     font-weight: bold;
     text-shadow: 2px 2px 3px black;
 }
 
-.marcador p {
+.tabla-estadisticas {
+    margin-top: 10px;
+    width: 50%;
+    border-collapse: collapse;
+    text-align: center;
+    background: rgba(0,0,0,0.7);
     color: white;
-    margin: 5px 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.tabla-estadisticas {
+    margin-top: 20px;
+    width: 190px;           
+    border-collapse: collapse;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 14px;
+}
+
+.tabla-estadisticas th,
+.tabla-estadisticas td {
+    padding: 6px;
+    border: 1px solid #666;
+    text-align: center;
+}
+
+.tabla-estadisticas th {
+    background: #F4320B;
 }

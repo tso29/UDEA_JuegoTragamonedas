@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 <html ng-app="Tragamonedas">
-<head>
+  <head>
     <title>Juego Tragamonedas</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="js/carrete.js"></script>
     <script src="js/juego.js"></script>
-    <link href="estilos/estilos.css" rel="stylesheet" type="text/css"/>
-</head>
-<body ng-controller="ControladorTragamonedas">
+    <link href="estilos/estilos.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body ng-controller="ControladorTragamonedas">
     <div class="encabezado">
-        <img class="icono_bar" src="imagenes/iconos/bar.jpg"/>
-        <h1 class="titulo">Mini Tragamonedas</h1>
+      <img class="icono_bar" src="imagenes/iconos/bar.jpg" />
+      <h1 class="titulo">Mini Tragamonedas</h1>
     </div>
-    
+
     <div class="boton">
-        <button ng-click="girar()" class="boton-play">
-            <img src="imagenes/iconos/palanca.jpg" class="icono-play"> Girar
-        </button>
+      <button ng-click="girar()" class="boton-play">
+        <img src="imagenes/iconos/palanca.jpg" class="icono-play" /> Girar
+      </button>
     </div>
-    
+
     <div id="mesa">
-        <ul>
-            <li ng-repeat="img in carretes" class="carrete">
-                <img ng-src="{{img}}">
-            </li>
-        </ul>
+      <ul>
+        <li ng-repeat="img in carretes" class="carrete">
+          <img ng-src="{{img}}" />
+        </li>
+      </ul>
 
-        <h2 class="resultado" ng-style="{'color':color}">
-            {{resultado}}
-        </h2>
+      <h2 class="resultado" ng-style="{'color':color}">{{resultado}}</h2>
 
-        <div class="marcador">
-            <p>Ganadas: {{ganadas}}</p>
-            <p>Casi: {{casi}}</p>
-            <p>Perdidas: {{perdidas}}</p>
-        </div>
+      <table class="tabla-estadisticas">
+        <tr>
+          <th>Resultado</th>
+          <th>Cantidad</th>
+        </tr>
+        <tr>
+          <td>Ganadas</td>
+          <td>{{ganadas}}</td>
+        </tr>
+        <tr>
+          <td>Casi</td>
+          <td>{{casi}}</td>
+        </tr>
+        <tr>
+          <td>Perdidas</td>
+          <td>{{perdidas}}</td>
+        </tr>
+      </table>
     </div>
-    
-</body>
+  </body>
 </html>
