@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="JuegoTargamonedas">
+<head>
+    <title>Juego Tragamonedas</title>
+    <link href="estilos/estilos.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="encabezado">
+        <img class="icono_bar" src="imagenes/iconos/bar.jpg"/>
+        <h1 class="titulo">Mini Tragamonedas</h1>
+    </div>
+    
+    <div class="boton">
+        <a href="#" ng-click="repartir()" class="boton-play">
+            <img src="imagenes/iconos/palanca.jpg">Play
+        </a>
+    </div>
+    
+    <div id="mesa">
+        <ul>
+            <li ng-repeat="carta in cartas" class="carta">
+                <img src="{{carta.getImagen()}}" title="{{carta.getNombre()}} {{carta.getPinta()}}">
+            </li>
+        </ul>
+        <table>
+            <tr ng-repeat="grupo in grupos">
+                <td>
+                    {{grupo.tipo}}
+                </td>
+                <td>
+                    {{grupo.nombreCarta}}
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+</html>
