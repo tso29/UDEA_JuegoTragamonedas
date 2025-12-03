@@ -1,4 +1,4 @@
-# UDEA_LAB_JUEGO_TRAGAMONEDAS
+# UDEA LAB JUEGO TRAGAMONEDAS
 
 ### Tecnicas de programación y laboratorio G3
 
